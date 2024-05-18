@@ -259,3 +259,190 @@ Poolname:  little_lemon_pool  number of connection(s):  3  user:  Joakim
 Poolname:  little_lemon_pool  number of connection(s):  4  user:  Hiroki
 Current connection(s) in pool:  5
 ```
+
+## Analysis reports
+
+### Summary report
+
+```
+# Task 4:
+# Create a stored procedure named BasicSalesReport that returns the following statistics: 
+import statistics;
+
+# Total sales
+
+# Average sale
+
+# Minimum bill paid
+
+# Maximum bill paid
+
+cursor.execute("DROP PROCEDURE IF EXISTS BasicSalesReport;");
+
+Role = "Manager";
+SQL_database_bookings_pc_basicsalesreport = f"""
+CREATE PROCEDURE BasicSalesReport(  ) 
+	BEGIN  
+        SELECT OrderID, TableNo, Quantity, BillAmount
+        FROM Orders;
+    END
+"""
+
+try:
+    current_connection = get_connection_frompool( );
+    cursor = current_connection.cursor();
+
+    cursor.execute( SQL_database_littlelemon_use );
+    result = cursor.fetchall();
+
+    cursor.execute( SHOW_TABLES );
+    tables = cursor.fetchall();
+
+    if "Orders" not in [ x[0] for x in tables ] :
+        print( "Please create database table Orders." );
+        quit;
+    else:
+
+        #### Execution SQL query statements by Python program. ######################
+        cursor.execute( SQL_database_bookings_pc_basicsalesreport );
+        cursor.callproc("BasicSalesReport");
+
+        resultset = next(cursor.stored_results());
+        resultset = resultset.fetchall();
+
+        columnnames = [ x.description for x in cursor.stored_results() ];
+        columnnames = [ a for ( a, b, c, d, e, f, g, h, i ) in columnnames[0] ];
+
+        Maximum_billamount = max([ BillAmount for OrderID, TableNo, Quantity, BillAmount in resultset ]);
+        Minimum_billamount = min([ BillAmount for OrderID, TableNo, Quantity, BillAmount in resultset ]);
+        Average_billamount = statistics.mean([ BillAmount for OrderID, TableNo, Quantity, BillAmount in resultset ]);
+        Summary_billamount = sum([ BillAmount for OrderID, TableNo, Quantity, BillAmount in resultset ]);
+
+        print( "Report name: ", " SQL_database_bookings_pc_basicsalesreport ");
+        print( columnnames );
+        print( resultset );
+        print( "#############################################################################" );
+        print( "Maximum_billamount: ", round(Maximum_billamount * 1.000, 2), " $" );
+        print( "Minimum_billamount: ", round(Minimum_billamount * 1.000, 2), " $" );
+        print( "Average_billamount: ", round(Average_billamount * 1.000, 2), " $" );
+        print( "Summary_billamount: ", Summary_billamount, " $" );
+        #############################################################################
+    
+except current_connection.Error as errorcodes : 
+    print( errorcodes.errno, errorcodes.msg );
+```
+
+### Results output
+
+```
+Report name:   SQL_database_bookings_pc_basicsalesreport 
+['OrderID', 'TableNo', 'Quantity', 'BillAmount']
+[(1, 12, 2, 86), (2, 19, 1, 37), (3, 15, 1, 37), (4, 5, 1, 40), (5, 8, 1, 43)]
+#############################################################################
+Maximum_billamount:  86.0  $
+Minimum_billamount:  37.0  $
+Average_billamount:  48.6  $
+Summary_billamount:  243  $
+```
+
+### Plain-text report
+
+```
+# Task 5:
+# Little Lemon needs to display the next three upcoming bookings from the Bookings table on the kitchen screen to notify their chefs which orders are due next.
+
+# Get a connection from the pool.
+current_connection = get_connection_frompool( );
+
+# Create a buffered cursor.
+cursor = current_connection.cursor(buffered=False);
+
+# Combine the data from the Bookings and the Employee tables. Sort the retrieved records in ascending order. Then display the information of the first three guests. 
+SQL_database_booking_employee_TOP3 = """
+SELECT Bookings.BookingID, Bookings.TableNo, Bookings.GuestFirstName, 
+    Bookings.GuestLastName, Bookings.BookingSlot, Employees.Name, Employees.Role
+
+FROM Bookings, Employees
+WHERE Bookings.EmployeeID = Employees.EmployeeID
+
+ORDER BY BookingSlot, BookingID
+LIMIT 3;
+"""
+
+try:
+    cursor.execute( SQL_database_littlelemon_use );
+    result = cursor.fetchall();
+
+    cursor.execute( SHOW_TABLES );
+    tables = cursor.fetchall();
+
+    if "Employees" not in [ x[0] for x in tables ] :
+        print( "Please create database table Employees." );
+        quit;
+
+    if "Bookings" not in [ x[0] for x in tables ] :
+        print( "Please create database table Bookings." );
+        quit;
+    else:
+
+        #### Execution SQL query statements by Python program. ######################
+        cursor.execute( SQL_database_booking_employee_TOP3 );
+        resultset = cursor.fetchall();
+
+        print( cursor.column_names );
+        
+        for item in resultset :
+            ( BookingID, TableNo, GuestFirstName, GuestLastName, BookingSlot, EmployeeName, EmployeeRole ) = item;
+            
+            CHARNUM = 25;
+            GuestFullNmae = GuestFirstName + " " + GuestLastName;
+            GuestFullNmae = GuestFullNmae + "".join( [" "] * ( CHARNUM - len(GuestFullNmae) ) );
+
+            EmployeeName = EmployeeName + "".join( [" "] * ( CHARNUM - len(EmployeeName) ) );
+            
+            # print( "BookingID: ", str(BookingID).zfill(2), " TableNo: ", str(TableNo).zfill(2), " GuestFullNmae: ", GuestFullNmae, " BookingSlot: ", BookingSlot,
+            #        " EmployeeName: ", EmployeeName, " EmployeeRole: ", EmployeeRole);
+
+
+            message = f"""
+            [{ BookingSlot }]
+
+            [{ GuestFullNmae }]
+
+            [Assigned to: { EmployeeName } [{ EmployeeRole }]]
+            """
+            print( message );
+
+    
+except current_connection.Error as errorcodes : 
+    print( errorcodes.errno, errorcodes.msg );
+
+current_connection.close();
+```
+
+### Results output
+
+```
+Poolname:  pool_b  number of connection(s):  2
+('BookingID', 'TableNo', 'GuestFirstName', 'GuestLastName', 'BookingSlot', 'Name', 'Role')
+
+            [15:00:00]
+
+            [Vanessa McCarthy         ]
+
+            [Assigned to: Giorgos Dioudis           [Head Chef]]
+            
+
+            [17:30:00]
+
+            [Marcos Romero            ]
+
+            [Assigned to: Fatma Kaya                [Assistant Chef]]
+            
+
+            [18:00:00]
+
+            [Anees Java               ]
+
+            [Assigned to: John Millar               [Receptionist]]
+```
