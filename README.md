@@ -67,3 +67,106 @@ Poolname:  pool_a  number of connection(s):  0
 Poolname:  pool_a  number of connection(s):  1
 Poolname:  pool_a  number of connection(s):  2
 ```
+
+## Stroe procedures and import for MySQL Client
+
+### Define store procedure and SQL statement
+
+```
+# Task 3: Implement a stored procedure GuestStatus
+# Create and call a stored procedure named GuestStatus that outputs status of each guest’s order based on which
+# employee is assigned to the order.
+
+cursor.execute("DROP PROCEDURE IF EXISTS GuestStatus;");
+
+SQL_database_littlelemon_use = """
+USE little_lemon_db;
+"""
+
+SHOW_TABLES = """
+SHOW TABLES;
+"""
+
+SQL_database_bookings_pc_gueststatus = """
+CREATE PROCEDURE GuestStatus(  ) 
+	BEGIN 
+        SELECT Bookings.BookingID, Bookings.TableNo, CONCAT(Bookings.GuestFirstName,
+            Bookings.GuestLastName) AS 'GuestFullName', Employees.Name AS 'EmployeeName', 
+                
+        CASE
+            WHEN Employees.Role in ( 'Manager', 'Assistant Manager' ) THEN 'Ready to pay'
+            WHEN Employees.Role in ( 'Head Chef' ) THEN 'Ready to serve'
+            WHEN Employees.Role in ( 'Assistant Chef' ) THEN 'Preparing Order'
+            WHEN Employees.Role in ( 'Head Waiter' ) THEN 'Order served'
+            ELSE "UNKNOWN"
+        END AS 'Status',
+        
+        MenuItems.Name AS 'MenuName', Orders.Quantity AS 'Quantity'
+
+        FROM Bookings, Employees, Orders, Menus, MenuItems
+
+        WHERE Bookings.EmployeeID = Employees.EmployeeID
+        AND Bookings.BookingID = Orders.BookingID
+        AND Bookings.TableNo = Orders.TableNo
+        AND Orders.MenuID = Menus.MenuID
+        AND Menus.ItemID = MenuItems.ItemID
+
+        ORDER BY Bookings.BookingSlot, CONCAT(Bookings.GuestFirstName, Bookings.GuestLastName), Employees.Name;
+    END
+"""
+```
+
+### Import data into MySQL tables
+
+```
+try:
+    cursor.execute( SQL_database_littlelemon_use );
+    result = cursor.fetchall();
+
+    cursor.execute( SHOW_TABLES );
+    tables = cursor.fetchall();
+
+    if "Bookings" not in [ x[0] for x in tables ] :
+        print( "Please create database table Bookings." );
+        quit;
+
+    if "Employees" not in [ x[0] for x in tables ] :
+        print( "Please create database table Employees." );
+        quit;
+
+    if "Orders" not in [ x[0] for x in tables ] :
+        print( "Please create database table Orders." );
+        quit;
+
+    if "Menus" not in [ x[0] for x in tables ] :
+        print( "Please create database table Menus." );
+        quit;
+
+    if "MenuItems" not in [ x[0] for x in tables ] :
+        print( "Please create database table MenuItems." );
+        quit;
+    else:
+        cursor.execute( SQL_database_bookings_pc_gueststatus );
+        cursor.callproc("GuestStatus");
+        
+        resultset = next(cursor.stored_results());
+        resultset = resultset.fetchall();
+
+        columnnames = [ x.description for x in cursor.stored_results() ];
+        columnnames = [ a for ( a, b, c, d, e, f, g, h, i ) in columnnames[0] ];
+        print( columnnames )
+
+        resultset = [ (x[0], x[1], x[2], x[3], x[4], x[5], x[6]) for x in resultset ];
+        resultset = [ ( BookingID, TableNo, GuestFullName, EmployeeName, Status, MenuName, Quantity ) for BookingID, 
+                        TableNo, GuestFullName, EmployeeName, Status, MenuName, Quantity in resultset ];
+
+        for item in resultset :
+            ( BookingID, TableNo, GuestFullName, EmployeeName, Status, MenuName, Quantity ) = item;
+
+            print( ( BookingID, TableNo, GuestFullName, EmployeeName, Status, MenuName, Quantity ) )       
+    
+except conn.Error as errorcodes : 
+    print( errorcodes.errno, errorcodes.msg );
+
+print( "conn.is_connected: ", conn.is_connected() );
+```
