@@ -125,6 +125,7 @@ CREATE PROCEDURE GuestStatus(  )
 ### Import data into MySQL tables
 
 🐑💬 ➰ Python code has the advantage of short-form iteration and alpha function when you can manage this dataset with simple code and easy to understand. There is a data header you can read from the return object property but its values are aligned on the execution object. Extraction of columns header values from the columnnames property is possible but we need to sort by preferable order as in report form. Creating the configuration file settings with column names and required field names is suitable and helps when application migration. </br>
+🧸💬 You can create many of temporary tables and programs as long as sufficient resources and disk space for target system resource management. Sometimes applications have slower calculation speeds that are because they cannot create temporary tables and they need to do their operation records in the existing temporary table, we need to have a process to validation and create a table for calculation. </br>
 
 ```
 try:
