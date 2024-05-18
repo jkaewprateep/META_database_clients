@@ -124,6 +124,8 @@ CREATE PROCEDURE GuestStatus(  )
 
 ### Import data into MySQL tables
 
+🐑💬 ➰ Python code has the advantage of short-form iteration and alpha function when you can manage this dataset with simple code and easy to understand. There is a data header you can read from the return object property but its values are aligned on the execution object. Extraction of columns header values from the columnnames property is possible but we need to sort by preferable order as in report form. Creating the configuration file settings with column names and required field names is suitable and helps when application migration. </br>
+
 ```
 try:
     cursor.execute( SQL_database_littlelemon_use );
