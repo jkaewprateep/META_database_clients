@@ -358,7 +358,7 @@ Summary_billamount:  243  $
 
 🧸💬 ```CHAR NUMBER``` is one method for print text-report creation, there is some understanding about character fields even in programming language, and the data selection display screen needs to indicate the number of characters to display from target fields as naturally perform as a file-based system. </br>
 🐐💬 ```DO NOT exceed``` the input number but the analysis field enabled the verification method because exceeding the range of the number may create a negative number for the next summarization and display, enable the analysis feature, or disable and compare. </br>
-🐑💬 ➰ ```LIMIT``` the number of resultsets returned to save the process of performance when working with the file system because most of the application users locked files when using them, they can request for authorization but when the user is a process the authorized user is important. <//br>
+🐑💬 ➰ ```LIMIT``` the number of resultsets returned to save the process of performance when working with the file system because most of the application users locked files when using them, they can request for authorization but when the user is a process the authorized user is important. </br>
 
 ```
 # Task 5:
