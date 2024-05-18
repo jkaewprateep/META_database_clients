@@ -185,7 +185,10 @@ print( "conn.is_connected: ", conn.is_connected() );
 
 🧸💬 It is not speed hacking or connectivity bandwidth expansion, sometimes the updated number of current connectivity changes because of the increased number of connection pool sizes. There is an SQL command to reset all sessions and start counting a number of connectivity or update the data tables but that is not a good practice. You should add the connection pool sizes after a new connection or restart of the services. </br>
 🦭💬 You can assign of data property into the connection or username or interactive fields as the connection object is a group of objects, properties, and activity updates. Sometimes we use the connection object to communicate with programs or external applications we manage them as messages. These messages are not only text and property because of interactions objects are a group of objects and properties with pre-defined values and manage that sufficiently to create responses in the same manner. ```Observe the API property they are designed for the same communication method response``` and connection and can perform database connectivity and database communication with error codes and status codes. </br>   
+</br>   
 🐐💬 This is a trick for communication API or opening an incident ticket to confirm with IT technical support because of good start makes your codes managible. </br>
+</br>   
+🐑💬 ➰ The example of an ```internal function``` that I can remove at any time and aware by programmers ```pool._set_pool_size(5);``` . This means a programmer of API allows you to manage application property or resources but it is internally managed and can be removed at any time. ``Quite is works easy.``` </br>
 
 ```
 connection = None;
