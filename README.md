@@ -58,7 +58,7 @@ for i in range( pool.pool_size ):
 ```
 
 🐐💬 What is the most priority when there is ```ER_ACCESS_DENIED_ERROR``` and ```ER_BAD_DB_ERROR```⁉️ We still importing new house loans sequence ... </br>
-🦭💬 It should filter and remarked by import and concatenate tables. </br>
+🦭💬 It should filter and remarked by import process and concatenate tables. </br>
 
 ### Result as output from create connection pool and filled with connected client connection defined
 
