@@ -21,7 +21,8 @@ username = "root";
 password = "";
 database = "little_lemon_db";
 
-pool = MySQLConnectionPool( pool_name="pool_a", pool_size=3, host="localhost", database=database, username=username, password=password );
+pool = MySQLConnectionPool( pool_name="pool_a", pool_size=3, host="localhost",
+        database=database, username=username, password=password );
 
 for i in range( pool.pool_size ):
 
