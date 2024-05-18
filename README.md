@@ -70,6 +70,8 @@ Poolname:  pool_a  number of connection(s):  2
 
 ## Stroe procedures and import for MySQL Client
 
+💃( 👩‍🏫 )💬 There are ```commit``` and ```uncommit``` SQL execution processes when all ```commit processes``` can cause a process time delay and you can be enabled of this behavior but utilize the resources the SQL process time can utilize temporary tables, programs, and store procedure to work with commit and uncommit ```execution```. </br>
+
 ### Define store procedure and SQL statement
 
 ```
