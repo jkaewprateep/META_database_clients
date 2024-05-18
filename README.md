@@ -264,7 +264,7 @@ Current connection(s) in pool:  5
 
 💃( 👩‍🏫 )💬 ```Analysis report``` is a tool for ```data extraction``` from prepared statements and data information, SQL program can create ```multiple data dimensions``` by its programming like behavior, conditions, and where causes. </br>
 🦤💬 Analysis reports they are using in ```automation processes``` such as summarize or total reports, simple data records variation is compared with aggregated data from different sources or methods. Import and ```aggregate data``` results have error record numbers or total numbers that can ```automatically be detected``` and then compared to each record whenever required. </br> 
-💃( 👩‍🏫 )💬 This method is an interesting method and some verification records methods such as sample records and find records uniqueness by ```statistics methods``` such as records ```quantization``` or ```data records representing percentile```. </br>
+💃( 👩‍🏫 )💬 This method is an interesting method and some verification records methods such as sample records and finding records uniqueness by ```statistics methods``` such as records ```quantization``` or ```data records representing percentile```. </br>
 🦤💬 On program screen results there are a few columns resultset with numbers representing a percentile of random selection unique records, minimum, maximum, and target summarized. ```Acceleration of calculation speed``` is a trick of quantization statistics and ```enabled program functions``` in ```R``` and ```Python language``` function enabled for their dataset. </br>
 
 ### Summary report
@@ -465,6 +465,10 @@ Poolname:  pool_b  number of connection(s):  2
 ```
 
 ## Working with cursors
+
+💃( 👩‍🏫 )💬 Cursor is an accuracy and integration method with accuracy of user display and system expectations, integrate value should perform as displayed on the screen CRT or integrated output methods. </br>
+🦤💬 Some operations can be performed on ```multiple operation systems``` by direct screen output stream or ```diacts``` because of cursors supporting features same as SQL database and ```wide ranges integration devices```. </br>
+💃( 👩‍🏫 )💬 Significantly defined columns are some words indicated or linear logarithms are more than calculation methods but sometimes it is display mode and make sure they are all linear all work can be performed by ratios. At the time of ratios is the power word of calculation and continues with gate logic and many statistics science apply to a working machine and their constants. </br>
 
 ```
 # Add your code here
