@@ -502,6 +502,7 @@ print( "connection.is_connected: ", connection.is_connected() );
 ### Results output
 
 ```
-[{'Tables_in_little_lemon': 'Bookings'}, {'Tables_in_little_lemon': 'MenuItems'}, {'Tables_in_little_lemon': 'Menus'}, {'Tables_in_little_lemon': 'Orders'}]
+[{'Tables_in_little_lemon': 'Bookings'}, {'Tables_in_little_lemon': 'MenuItems'}, {'Tables_in_little_lemon': 'Menus'},
+{'Tables_in_little_lemon': 'Orders'}]
 connection.is_connected:  True
 ```
