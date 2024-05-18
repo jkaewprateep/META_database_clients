@@ -43,3 +43,11 @@ for i in range( pool.pool_size ):
         else :
             print( errorcodes.errno, errorcodes.msg );
 ```
+
+### Result as output from create connection pool and filled with connected client connection defined
+
+```
+Poolname:  pool_a  number of connection(s):  0
+Poolname:  pool_a  number of connection(s):  1
+Poolname:  pool_a  number of connection(s):  2
+```
