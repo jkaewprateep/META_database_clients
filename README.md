@@ -358,7 +358,8 @@ Summary_billamount:  243  $
 
 ```
 # Task 5:
-# Little Lemon needs to display the next three upcoming bookings from the Bookings table on the kitchen screen to notify their chefs which orders are due next.
+# Little Lemon needs to display the next three upcoming bookings from the Bookings table on the kitchen screen to notify
+# their chefs which orders are due next.
 
 # Get a connection from the pool.
 current_connection = get_connection_frompool( );
@@ -366,7 +367,9 @@ current_connection = get_connection_frompool( );
 # Create a buffered cursor.
 cursor = current_connection.cursor(buffered=False);
 
-# Combine the data from the Bookings and the Employee tables. Sort the retrieved records in ascending order. Then display the information of the first three guests. 
+# Combine the data from the Bookings and the Employee tables. Sort the retrieved records in ascending order.
+# Then display the information of the first three guests.
+
 SQL_database_booking_employee_TOP3 = """
 SELECT Bookings.BookingID, Bookings.TableNo, Bookings.GuestFirstName, 
     Bookings.GuestLastName, Bookings.BookingSlot, Employees.Name, Employees.Role
@@ -409,7 +412,8 @@ try:
 
             EmployeeName = EmployeeName + "".join( [" "] * ( CHARNUM - len(EmployeeName) ) );
             
-            # print( "BookingID: ", str(BookingID).zfill(2), " TableNo: ", str(TableNo).zfill(2), " GuestFullNmae: ", GuestFullNmae, " BookingSlot: ", BookingSlot,
+            # print( "BookingID: ", str(BookingID).zfill(2), " TableNo: ", str(TableNo).zfill(2), " GuestFullNmae: ",
+	    # GuestFullNmae, " BookingSlot: ", BookingSlot,
             #        " EmployeeName: ", EmployeeName, " EmployeeRole: ", EmployeeRole);
 
 
