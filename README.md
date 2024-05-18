@@ -435,6 +435,8 @@ current_connection.close();
 
 ### Results output
 
+🧸💬 ```CHAR NUMBER``` is one method for print text-report creation, there is some understanding about character fields even in programing language, and the data selection display screen needs to indicate the number of characters to display from target fields as naturally perform as a file-based system. </br>
+
 ```
 Poolname:  pool_b  number of connection(s):  2
 ('BookingID', 'TableNo', 'GuestFirstName', 'GuestLastName', 'BookingSlot', 'Name', 'Role')
