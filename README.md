@@ -262,6 +262,9 @@ Current connection(s) in pool:  5
 
 ## Analysis reports
 
+💃( 👩‍🏫 )💬 Analysis report is a tool for data extraction from prepared statements and data information, SQL program can create multiple data dimensions by its programming like behavior, conditions, and where causes. </br>
+🦤💬 Analysis reports they are using in automation processes such as summarize or total reports, simple data records variation is compared with aggregated data from different sources or methods. Import and aggregate data results have error record number or total number can automatically be detected than compare each record every time when it may require. </br> 
+
 ### Summary report
 
 ```
