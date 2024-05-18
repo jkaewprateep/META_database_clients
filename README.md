@@ -180,3 +180,73 @@ except conn.Error as errorcodes :
 
 print( "conn.is_connected: ", conn.is_connected() );
 ```
+
+## Increase of connection pool size ( make sure you have client and server codes manage )
+
+```
+connection = None;
+guests = ["Anna", "Marcos", "Diana", "Joakim", "Hiroki"];
+
+pool = MySQLConnectionPool( pool_name="little_lemon_pool", pool_size=3, host="localhost", database=database, username=username, password=password );
+
+for i in range( pool.pool_size ):
+
+    try: 
+        connection = pool.get_connection();
+        if connection.is_connected() :
+            cursor = connection.cursor();
+        else :
+            connection  = connector.connect( user=username, password=password );
+
+        print( "Poolname: ", pool.pool_name, " number of connection(s): ", i, " user: ", guests[i] );
+
+    except connector.Error as errorcodes :
+        if errorcodes.errno ==  errorcode.ER_ACCESS_DENIED_ERROR :
+            print( connection.is_connected(), "ER_ACCESS_DENIED_ERROR" );
+        elif errorcodes.errno ==  errorcode.ER_BAD_DB_ERROR :
+            print( connection.is_connected(), "ER_BAD_DB_ERROR" );
+        else :
+            print( errorcodes.errno, errorcodes.msg );
+
+print( "Current connection(s) in pool: ", pool.pool_size );
+current_users = pool.pool_size;
+pool._set_pool_size(5);
+
+new_connection  = connector.connect( user=username, password=password );
+new_connection_2  = connector.connect( user=username, password=password );
+pool.add_connection( new_connection );
+pool.add_connection( new_connection_2 );
+
+for i in range( pool.pool_size - current_users ):
+
+    try: 
+        connection = pool.get_connection();
+        if connection.is_connected() :
+            cursor = connection.cursor();
+        else :
+            connection  = connector.connect( user=username, password=password );
+
+        print( "Poolname: ", pool.pool_name, " number of connection(s): ", current_users + i, " user: ", guests[current_users + i] );
+
+    except connector.Error as errorcodes :
+        if errorcodes.errno ==  errorcode.ER_ACCESS_DENIED_ERROR :
+            print( connection.is_connected(), "ER_ACCESS_DENIED_ERROR" );
+        elif errorcodes.errno ==  errorcode.ER_BAD_DB_ERROR :
+            print( connection.is_connected(), "ER_BAD_DB_ERROR" );
+        else :
+            print( errorcodes.errno, errorcodes.msg );
+
+print( "Current connection(s) in pool: ", pool.pool_size );
+```
+
+### Results output
+
+```
+Poolname:  little_lemon_pool  number of connection(s):  0  user:  Anna
+Poolname:  little_lemon_pool  number of connection(s):  1  user:  Marcos
+Poolname:  little_lemon_pool  number of connection(s):  2  user:  Diana
+Current connection(s) in pool:  3
+Poolname:  little_lemon_pool  number of connection(s):  3  user:  Joakim
+Poolname:  little_lemon_pool  number of connection(s):  4  user:  Hiroki
+Current connection(s) in pool:  5
+```
