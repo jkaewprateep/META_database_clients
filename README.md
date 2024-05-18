@@ -187,7 +187,8 @@ print( "conn.is_connected: ", conn.is_connected() );
 connection = None;
 guests = ["Anna", "Marcos", "Diana", "Joakim", "Hiroki"];
 
-pool = MySQLConnectionPool( pool_name="little_lemon_pool", pool_size=3, host="localhost", database=database, username=username, password=password );
+pool = MySQLConnectionPool( pool_name="little_lemon_pool", pool_size=3, host="localhost",
+		database=database, username=username, password=password );
 
 for i in range( pool.pool_size ):
 
@@ -226,7 +227,8 @@ for i in range( pool.pool_size - current_users ):
         else :
             connection  = connector.connect( user=username, password=password );
 
-        print( "Poolname: ", pool.pool_name, " number of connection(s): ", current_users + i, " user: ", guests[current_users + i] );
+        print( "Poolname: ", pool.pool_name, " number of connection(s): ", current_users + i, " user: ",
+		guests[current_users + i] );
 
     except connector.Error as errorcodes :
         if errorcodes.errno ==  errorcode.ER_ACCESS_DENIED_ERROR :
