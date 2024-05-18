@@ -75,6 +75,8 @@ Poolname:  pool_a  number of connection(s):  2
 
 ### Define store procedure and SQL statement
 
+🧸💬 Implementation of the select case and where cause selection, create utility store procedure for the selective case and condition values return. The SQL program can working with multiple of data sources or data tables when it create of clean code by removed of duplicated data joined and conditions by simplify of calling method by target program and parameters. </br>
+
 ```
 # Task 3: Implement a stored procedure GuestStatus
 # Create and call a stored procedure named GuestStatus that outputs status of each guest’s order based on which
