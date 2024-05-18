@@ -188,7 +188,7 @@ print( "conn.is_connected: ", conn.is_connected() );
 </br>   
 🐐💬 This is a trick for communication API or opening an incident ticket to confirm with IT technical support because of good start makes your codes managible. </br>
 </br>   
-🐑💬 ➰ The example of an ```internal function``` that I can remove at any time and aware by programmers ```pool._set_pool_size(5);``` . This means a programmer of API allows you to manage application property or resources but it is internally managed and can be removed at any time. ``Quite is works easy.``` </br>
+🐑💬 ➰ The example of an ```internal function``` that I can remove at any time and aware by programmers ```pool._set_pool_size(5);``` . This means a programmer of API allows you to manage application property or resources but it is internally managed and can be removed at any time. ```Quite is works easy.``` </br>
 
 ```
 connection = None;
