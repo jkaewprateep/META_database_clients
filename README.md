@@ -463,3 +463,45 @@ Poolname:  pool_b  number of connection(s):  2
 
             [Assigned to: John Millar               [Receptionist]]
 ```
+
+## Working with cursors
+
+```
+# Add your code here
+
+# * Create a cursor 
+# Creating the cursor is an important step to communicate with the entire MySQL database using Python. 
+cursor = connection.cursor(dictionary=True)
+
+# * Execute `USE little_lemon` 
+SQL_database_littlelemon_use = """
+USE little_lemon;
+"""
+
+SHOW_TABLES = """
+SHOW TABLES;
+"""
+
+try:
+    cursor.execute( SQL_database_littlelemon_use );
+    result = cursor.fetchall();
+
+    cursor.execute( SHOW_TABLES );
+    resultset = cursor.fetchall();
+
+    print( resultset );
+
+except connector.Error as errorcodes : 
+    print( errorcodes.errno, errorcodes.msg );
+
+print( "connection.is_connected: ", connection.is_connected() );
+
+#####################################################################
+```
+
+### Results output
+
+```
+[{'Tables_in_little_lemon': 'Bookings'}, {'Tables_in_little_lemon': 'MenuItems'}, {'Tables_in_little_lemon': 'Menus'}, {'Tables_in_little_lemon': 'Orders'}]
+connection.is_connected:  True
+```
