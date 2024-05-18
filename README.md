@@ -18,6 +18,9 @@ META database clients
 🐑💬 ➰ Server - client database connectivity resources utilization on larger scales you need to manage the number of connectivity, connectivity timeout, security level, communication message encoder and decoder selection, connectivity speed, and accountibility. Microservices and temporary tables are one of the methods, client manage codes is another method, and resource management with queue and assignment is another method, queuing or file system is another method but ```MySQL``` and ```MongoDB``` come with a connection pool for resource utilization and you can create database adaptor for your application. For example, standard ```database.js``` or database connection adaptor in ```Django``` or ```Spring framework``` or ```java application``` can utilized with MySQL or MongoDB as it is a class with ```classes heritance property```. </br>
 </br>
 🐐💬 The conversation about not ```increasing the connection pool size is true``` because it had already been assigned and first introduced they had a known issue about return resources indicated ```known issue```. To use this trick you need to manage both MySQL resource pool and clients. </br>
+</br>
+💃( 👩‍🏫 )💬 Allowed me with this time error code is from database connector and they are enumerical form, you can convert them into number mapping with target error code and error status. This message enumerical number provides system default numbers for input return last error code found from target execution. </br>
+🦤💬 These tangible numbers create responsive actions by application codes executing the operation, this is because they are planned by both client and server, selection of response and feedback actions and they are managed services this process is a priority value form. </br>
 
 ```
 # 🧸💬 Library import
