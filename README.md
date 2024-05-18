@@ -71,6 +71,7 @@ Poolname:  pool_a  number of connection(s):  2
 ## Stroe procedures and import for MySQL Client
 
 💃( 👩‍🏫 )💬 There are ```commit``` and ```uncommit``` SQL execution processes when all ```commit processes``` can cause a process time delay and you can be enabled of this behavior but utilize the resources the SQL process time can utilize temporary tables, programs, and store procedure to work with commit and uncommit ```execution```. </br>
+🦤💬 By database design system temporary tables and third-party ```temporary tables``` are not ```statistics acquiring plans``` for execution because they are updated statistics with the ```target client``` and the client may inform you with an update message in some communication method different from the database. Many users from statistics are different because ```event listeners``` had information but the database is not ```up-to-date with the statistics``` values. This is not by the system design ```IT application support``` can answer this question and should have one source of information comparison as one priority. </br>
 
 ### Define store procedure and SQL statement
 
