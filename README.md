@@ -468,7 +468,7 @@ Poolname:  pool_b  number of connection(s):  2
 
 💃( 👩‍🏫 )💬 Cursor is an accuracy and integration method with accuracy of user display and system expectations, integrate value should perform as displayed on the screen CRT or integrated output methods. </br>
 🦤💬 Some operations can be performed on ```multiple operation systems``` by direct screen output stream or ```diacts``` because of cursors supporting features same as SQL database and ```wide ranges integration devices```. </br>
-💃( 👩‍🏫 )💬 Significantly defined columns are some words indicated or linear logarithms are more than calculation methods but sometimes it is display mode and make sure they are all linear all work can be performed by ratios. At the time of ratios is the power word of calculation and continues with gate logic and many statistics science apply to a working machine and their constants. </br>
+💃( 👩‍🏫 )💬 ```Significantly defined columns``` are some words indicated or ```linear logarithms``` are more than calculation methods but sometimes it is display mode and ```make sure they are all linear all work can be performed by ratios```. At the time of ratios is the power word of calculation and continues with gate logic and many statistics science apply to a working machine and their constants. </br>
 
 ```
 # Add your code here
