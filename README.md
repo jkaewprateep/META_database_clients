@@ -14,6 +14,8 @@ META database clients
 
 ## MySQL Client database connection pool
 
+🧸💬 Data integration method does not connect and fast transfer rates of information but builds and extracts information suitable with clients, a manageable and sufficient method way in communication and replication. There are resources or data sources management when SQL and Non-SQL develop resource management help about data integrity with manageable when the user needs can manage of connectivity and utilized of database connectivity resources by their codes. Implementation resource pools are shared resources with tangible programming assignments for multiple user access and connectivity property parameters provided. </br>
+
 ```
 # 🧸💬 Library import
 import mysql.connector as connector;
