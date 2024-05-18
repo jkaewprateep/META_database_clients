@@ -21,6 +21,7 @@ META database clients
 </br>
 💃( 👩‍🏫 )💬 Allowed me with this time error code is from database connector and they are enumerical form, you can convert them into number mapping with target error code and error status. This message enumerical number provides system default numbers for input return last error code found from target execution. </br>
 🦤💬 These tangible numbers create responsive actions by application codes executing the operation, this is because they are planned by both client and server, selection of response and feedback actions and they are managed services this process is a priority value form. </br>
+💃( 👩‍🏫 )💬 To action perform design authorized by priority, users authority, and communication effective of the process because at the time execution to fixed the issue with time all processes are the same importance and effective is defined. User authority should match the application or process priority, error code is one of the indicators of the process. Develop yourself for potential skills and potential management to have suitable authority. </br>
 
 ```
 # 🧸💬 Library import
