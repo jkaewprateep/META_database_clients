@@ -270,7 +270,8 @@ Current connection(s) in pool:  5
 ### Summary report
 
 🧸💬 Basics store procedure with Python language basics statistics function, selection of appropriate function, and use of the procedure for delays response process. Selection by procedure has an advantage over queue messages for data selection from target objects in the database. </br>
-🐑💬 ➰ By application insert and update data records operations are using SQL procedure, benefits of the delayed message, access control, server manage resources, success results return guarantee, and multiple-session accessibility. Creating a store procedure for data selection is performed in one of the item checklists for database process task optimization. <//br> 
+🐑💬 ➰ By application insert and update data records operations are using SQL procedure, benefits of the delayed message, access control, server manage resources, success results return guarantee, and multiple-session accessibility. Creating a store procedure for data selection is performed in one of the item checklists for database process task optimization. </br>
+🐐💬 You know about system procedures and user program procedures that applications create for data services and reports, they are insert of data fields with indexes and unique names for control of data manipulation and insertion of random selection codes as one of the objectives to prevent external code specification. Applicable of them also control of user access and user response for different user groups an authorized users. Booo.~  </br>
 
 ```
 # Task 4:
