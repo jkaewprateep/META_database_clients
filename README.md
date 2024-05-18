@@ -510,3 +510,11 @@ print( "connection.is_connected: ", connection.is_connected() );
 {'Tables_in_little_lemon': 'Orders'}]
 connection.is_connected:  True
 ```
+
+---
+
+<p align="center" width="100%">
+    <img width="30%" src="https://github.com/jkaewprateep/advanced_mysql_topics_notes/blob/main/custom_dataset.png">
+    <img width="30%" src="https://github.com/jkaewprateep/advanced_mysql_topics_notes/blob/main/custom_dataset_2.png"> </br>
+    <b> 🥺💬 รับจ้างเขียน functions </b> </br>
+</p>
