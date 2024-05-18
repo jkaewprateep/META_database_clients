@@ -262,10 +262,10 @@ Current connection(s) in pool:  5
 
 ## Analysis reports
 
-💃( 👩‍🏫 )💬 Analysis report is a tool for data extraction from prepared statements and data information, SQL program can create multiple data dimensions by its programming like behavior, conditions, and where causes. </br>
-🦤💬 Analysis reports they are using in automation processes such as summarize or total reports, simple data records variation is compared with aggregated data from different sources or methods. Import and aggregate data results have error record numbers or total numbers that can automatically be detected and then compared to each record whenever it required. </br> 
-💃( 👩‍🏫 )💬 This method is an interesting method and some verification records methods such as sample records and find records uniqueness by statistics methods such as records quantization or data records representing percentile. </br>
-🦤💬 On program screen results there are a few columns resultset with numbers representing a percentile of random selection unique records, minimum, maximum, and target summarized. Acceleration of calculation speed is a trick of quantization statistics and enabled program functions in R and Python language function enabled for their dataset. </br>
+💃( 👩‍🏫 )💬 ```Analysis report``` is a tool for ```data extraction``` from prepared statements and data information, SQL program can create ```multiple data dimensions``` by its programming like behavior, conditions, and where causes. </br>
+🦤💬 Analysis reports they are using in ```automation processes``` such as summarize or total reports, simple data records variation is compared with aggregated data from different sources or methods. Import and ```aggregate data``` results have error record numbers or total numbers that can ```automatically be detected``` and then compared to each record whenever required. </br> 
+💃( 👩‍🏫 )💬 This method is an interesting method and some verification records methods such as sample records and find records uniqueness by ```statistics methods``` such as records ```quantization``` or ```data records representing percentile```. </br>
+🦤💬 On program screen results there are a few columns resultset with numbers representing a percentile of random selection unique records, minimum, maximum, and target summarized. ```Acceleration of calculation speed``` is a trick of quantization statistics and ```enabled program functions``` in ```R``` and ```Python language``` function enabled for their dataset. </br>
 
 ### Summary report
 
