@@ -73,6 +73,8 @@ Poolname:  pool_a  number of connection(s):  2
 💃( 👩‍🏫 )💬 There are ```commit``` and ```uncommit``` SQL execution processes when all ```commit processes``` can cause a process time delay and you can be enabled of this behavior but utilize the resources the SQL process time can utilize temporary tables, programs, and store procedure to work with commit and uncommit ```execution```. </br>
 🦤💬 By database design system temporary tables and third-party ```temporary tables``` are not ```statistics acquiring plans``` for execution because they are updated statistics with the ```target client``` and the client may inform you with an update message in some communication method different from the database. Many users from statistics are different because ```event listeners``` had information but the database is not ```up-to-date with the statistics``` values. This is not by the system design ```IT application support``` can answer this question and should have one source of information comparison as one priority. </br>
 
+[META Advanced MySQL Topics - notes]( https://github.com/jkaewprateep/advanced_mysql_topics_notes/blob/main/README.md )
+
 ### Define store procedure and SQL statement
 
 🧸💬 Implementation of the select case and where cause selection, create utility store procedure for the ```selective case``` and ```condition values return```. The SQL program can working with ```multiple of data sources``` or ```data tables``` when it create of clean code by removed of duplicated data joined and conditions by simplify of calling method by target program and parameters. </br>
